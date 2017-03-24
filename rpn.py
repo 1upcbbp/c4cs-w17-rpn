@@ -27,6 +27,7 @@ def calculate(arg):
 	return stack.pop()
 
 def main():
+	b = 3 * 3
 	while True:
 		result = calculate(input('rpn calc> '))
 		print("Result:", result)
