@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
+import readline
+from prettytable import PrettyTable
 
 OPERATORS = {
 	'+': operator.add,
@@ -28,6 +30,13 @@ def calculate(arg):
 
 def main():
 	b = 3 * 3
+	table = PrettyTable(['Operator','Function'])
+	table.add_row(['+','Addition'])
+	table.add_row(['-','Subtraction'])
+	table.add_row(['*','Multiplication'])
+	table.add_row(['/','Divison'])
+	table.add_row(['^','Exponentiation'])
+	print(table)
 	while True:
 		result = calculate(input('rpn calc> '))
 		print("Result:", result)
